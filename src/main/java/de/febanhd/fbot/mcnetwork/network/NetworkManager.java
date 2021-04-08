@@ -294,13 +294,6 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
 
     public static NetworkManager createNetworkManager(InetAddress host, int port, boolean useEpoll, FBot bot, Runnable callback) {
         final NetworkManager networkmanager = new NetworkManager(EnumPacketDirection.CLIENTBOUND, bot, callback);
-        Class<? extends SocketChannel> oclass;
-
-        if (Epoll.isAvailable() && useEpoll) {
-            oclass = EpollSocketChannel.class;
-        } else {
-            oclass = NioSocketChannel.class;
-        }
 
         new Bootstrap().group(new NioEventLoopGroup()).handler(new ChannelInitializer<Channel>() {
             protected void initChannel(Channel p_initChannel_1_) throws Exception {
@@ -317,7 +310,7 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
                         .addLast((String) "encoder", new MessageSerializer(EnumPacketDirection.SERVERBOUND))
                         .addLast((String) "packet_handler", networkmanager);
             }
-        }).channel(oclass)
+        }).channel(NioSocketChannel.class)
                 .connect(host, port)
                 .syncUninterruptibly();
         return networkmanager;
