@@ -21,7 +21,7 @@ See [usage](#usage) for an example
 * Add the API to your Project
 
 * Do some magic shit ;)
-  - 1: Single Bot Example with offline account:
+  - 1: Single Bot Example with online account:
     ```java
     public static void main(String[] args) {
           FBot bot = BotFactory.createBot("test@gamil.com", "mysafepassword");
@@ -33,7 +33,7 @@ See [usage](#usage) for an example
           });
     }
     ```
-  - 2: Single Bot Example with online:
+  - 2: Single Bot Example with offline account:
     ```java
     public static void main(String[] args) {
           FBot bot = BotFactory.createBot("example-bot");
