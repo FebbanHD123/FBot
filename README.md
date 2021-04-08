@@ -68,4 +68,4 @@ See the [open issues](https://github.com/FebbanHD123/FBot/issues) for a list of 
 
 My Discord
  - Profile: FebanHD#5673
- - [Server](https://discord.gg/pKTfFt4fG5)
+ - Server: [Click to join](https://discord.gg/pKTfFt4fG5)
