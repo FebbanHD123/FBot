@@ -21,7 +21,7 @@ See [usage](#usage) for an example
 * Add the API to your Project
 
 * Do some magic shit ;)
-  - 1: Single Bot Example (Offline/Cracked Bot):
+  - 1: Single Bot Example with offline account:
     ```java
     public static void main(String[] args) {
           FBot bot = BotFactory.createBot("test@gamil.com", "mysafepassword");
@@ -33,7 +33,7 @@ See [usage](#usage) for an example
           });
     }
     ```
-  - 2: Single Bot Example (Online Bot):
+  - 2: Single Bot Example with online:
     ```java
     public static void main(String[] args) {
           FBot bot = BotFactory.createBot("example-bot");
@@ -45,7 +45,7 @@ See [usage](#usage) for an example
           });
     }
     ```
-  - 3: Botter Example (Altening):
+  - 3: Botter Example with altening accounts:
     ```java
     public static void main(String[] args) {
         String alteningApiKey = "api-key"; //the api of your altening account
